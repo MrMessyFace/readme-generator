@@ -84,6 +84,9 @@ function init() {
             name: 'contribution'
         },
     ])
+    .then((answers) => {
+        writeToFile('README.md', answers);
+    })
 };
 
 // Function call to initialize app
