@@ -8,7 +8,7 @@ const questions = [
     "What is your GitHub username?",
     "What is your email address?",
     "What is your project's name?",
-    "Please write a short description for your project.",
+    "Please write a short description fo your project.",
     "What kind of license should your project have?",
     "What command should be run to install dependencies?",
     "What command should be run to run tests?",
@@ -18,11 +18,12 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => {
+    const readme = `# ${data["project-title"]}`;
+    fs.writeFile(fileName, readme, (err) => {
         if (err) {
             console.log(err);
         } else {
-            console.log("README file successfully generated!");
+            console.log("README file generated successfully!");
         };
     });
 };
@@ -65,14 +66,12 @@ function init() {
         {
             type: 'input',
             message: questions[5],
-            name: 'install',
-            default: 'npm i'
+            name: 'install'
         },
         {
             type: 'input',
             message: questions[6],
-            name: 'test',
-            default: 'npm test'
+            name: 'test'
         },
         {
             type: 'input',
@@ -86,9 +85,7 @@ function init() {
         },
     ])
     .then((answers) => {
-        // console.log(answers);
-        const data = generateMarkdown(answers)
-        writeToFile("README.md", data)
+        writeToFile('README.md', answers);
     })
 };
 

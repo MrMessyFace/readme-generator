@@ -58,7 +58,7 @@ function renderLicenseSection(license) {
   } else if (license === 'BSD 3') {
     return;
   } else if (license === 'None') {
-    return 'No license.';
+    return '';
   } else {
     return '';
   }
@@ -66,12 +66,13 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  {data.username, data.email, data.title, data.description, data.license, data.install, data.test, data.usage, data.contribution}
+  {fullName, username, email, title, description, license, install, test, usage, contribution}
   return `# ${data.title}
+  # ${title}
 
   ## Description
 
-  ${data.description}
+  ${description}
 
   ## Table of Contents
 
@@ -83,27 +84,27 @@ function generateMarkdown(data) {
   
   ## Installation
   
-  To install necessary dependencies, run the following command: ${data.install}
+  To install necessary dependencies, run the following command: ${install}
   
   ## Usage
 
-  ${data.usage}
+  ${usage}
   
   ## Contributing
 
-  ${data.contribution}
+  ${contribution}
 
   ## Tests
   
-  To run tests, run the following command: ${data.test}
+  To run tests, run the following command: ${test}
   
   ## Questions
 
-  If you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [${data.username}](https://github.com/${data.username}/).
+  If you have any questions about the repo, open an issue or contact me directly at ${email}. You can find more of my work at [${username}](https://github.com/${username}/).
   
   ## License
-
-  ${renderLicenseSection(data.license)}
+  
+  ${renderLicenseSection(license)}
 `;
 }
 
