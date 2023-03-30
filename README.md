@@ -15,3 +15,5 @@ When a user opens the Main directory in their command line, they would install I
 ## Credits
 
 Starter code was provided to me in the bootcamp but was updated based on activities that were worked on in class.
+
+See how it works in this [video demonstration](https://drive.google.com/file/d/1v2Nm0KMaARYUonXva0OYrHRYJcORxgTZ/view).
