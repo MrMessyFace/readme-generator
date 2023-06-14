@@ -85,11 +85,11 @@ function init() {
             name: 'contribution'
         },
     ])
-    .then((answers) => {
-        console.log(answers);
-        const data = generateMarkdown(answers)
-        writeToFile("README.md", data)
-    })
+        .then((answers) => {
+            console.log(answers);
+            const data = generateMarkdown(answers)
+            writeToFile("README.md", data)
+        })
 };
 
 // Function call to initialize app
