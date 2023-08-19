@@ -1,7 +1,7 @@
 {
   "name": "readme-generator",
   "version": "1.0.0",
-  "description": "Week 9 Homework Challenge from Northwestern Coding Bootcamp.",
+  "description": "Week 9 Module Homework Challenge from the Northwestern University Full Stack Coding Bootcamp.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
